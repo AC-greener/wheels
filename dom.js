@@ -80,6 +80,7 @@ window.jQuery = function(nodeOrSelector) {
     })
    
   },
+
   nodes.text = function(text) {
     if(text === undefined) {  //getText
       var texts = []
@@ -94,9 +95,16 @@ window.jQuery = function(nodeOrSelector) {
       }
     }
   }
+
   return nodes
 }
-var node2 = jQuery('ul>li')
+window.$ = jQuery
+
+//命名习惯 jquery对象 使用$开头
+var my_node = jQuery('ul>li')
 
 node2.addClass(['red'])
 node2.text('1')
+//用户用就是生产环境
+//自己用就是开发环境
+//js source map
